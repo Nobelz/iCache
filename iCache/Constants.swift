@@ -21,4 +21,9 @@ struct K {
         static let yellow = "BrandYellow"
         static let red = "BrandRed"
     }
+    
+    struct Segues {
+        static let loginSegue = "LoginToMain"
+        static let forgotPasswordSegue = "LoginToResetPassword"
+    }
 }

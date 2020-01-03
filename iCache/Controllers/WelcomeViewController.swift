@@ -33,7 +33,10 @@ class WelcomeViewController: UIViewController {
     @IBAction func registerPressed(_ sender: UIButton) {
         if let navBar = navigationController?.navigationBar {
             navBar.barTintColor = UIColor(named: K.BrandColors.blue)
-            navBar.tintColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            navBar.tintColor = UIColor.white
+            
+            let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
+            navigationController?.navigationBar.titleTextAttributes = textAttributes
         }
     }
     
@@ -41,6 +44,9 @@ class WelcomeViewController: UIViewController {
         if let navBar = navigationController?.navigationBar {
             navBar.barTintColor = UIColor(named: K.BrandColors.lightBlue)
             navBar.tintColor = UIColor(named: K.BrandColors.blue)
+            
+            let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor(named: K.BrandColors.blue)]
+            navigationController?.navigationBar.titleTextAttributes = textAttributes as [NSAttributedString.Key : Any]
         }
     }
 }

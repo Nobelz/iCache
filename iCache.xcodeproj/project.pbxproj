@@ -11,6 +11,7 @@
 		ED14C66C23BEE69100E3C427 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED14C66A23BEE69100E3C427 /* Main.storyboard */; };
 		ED87BC9E23BED5AF002BFCAA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED87BC9D23BED5AF002BFCAA /* Constants.swift */; };
 		EDE161F523BFA9C70049272C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE161F423BFA9C70049272C /* LoginViewController.swift */; };
+		EDEC33FF23BFC49A00AD2BEE /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEC33FE23BFC49A00AD2BEE /* RegisterViewController.swift */; };
 		EDFDCFFD23BEB7FD001774DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFDCFFC23BEB7FD001774DD /* AppDelegate.swift */; };
 		EDFDCFFF23BEB7FD001774DD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFDCFFE23BEB7FD001774DD /* SceneDelegate.swift */; };
 		EDFDD00123BEB7FD001774DD /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFDD00023BEB7FD001774DD /* WelcomeViewController.swift */; };
@@ -25,6 +26,7 @@
 		ED14C66B23BEE69100E3C427 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ED87BC9D23BED5AF002BFCAA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		EDE161F423BFA9C70049272C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		EDEC33FE23BFC49A00AD2BEE /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		EDFDCFF923BEB7FD001774DD /* iCache.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iCache.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDFDCFFC23BEB7FD001774DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDFDCFFE23BEB7FD001774DD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 			children = (
 				EDFDD00023BEB7FD001774DD /* WelcomeViewController.swift */,
 				EDE161F423BFA9C70049272C /* LoginViewController.swift */,
+				EDEC33FE23BFC49A00AD2BEE /* RegisterViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 				EDFDD00123BEB7FD001774DD /* WelcomeViewController.swift in Sources */,
 				EDFDCFFD23BEB7FD001774DD /* AppDelegate.swift in Sources */,
 				EDFDCFFF23BEB7FD001774DD /* SceneDelegate.swift in Sources */,
+				EDEC33FF23BFC49A00AD2BEE /* RegisterViewController.swift in Sources */,
 				EDE161F523BFA9C70049272C /* LoginViewController.swift in Sources */,
 				ED87BC9E23BED5AF002BFCAA /* Constants.swift in Sources */,
 			);
