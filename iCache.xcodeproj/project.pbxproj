@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		860D1ED85C34AF8C6D52A1DB /* Pods_iCache.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9CA5BC589B7038336018E50 /* Pods_iCache.framework */; };
 		ED14C66C23BEE69100E3C427 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED14C66A23BEE69100E3C427 /* Main.storyboard */; };
-		ED14C67023BEE72D00E3C427 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED14C66F23BEE72D00E3C427 /* LoginViewController.swift */; };
+		ED19E56423BEEEAD00DB7B7E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED19E56323BEEEAD00DB7B7E /* LoginViewController.swift */; };
 		ED87BC9E23BED5AF002BFCAA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED87BC9D23BED5AF002BFCAA /* Constants.swift */; };
 		EDFDCFFD23BEB7FD001774DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFDCFFC23BEB7FD001774DD /* AppDelegate.swift */; };
 		EDFDCFFF23BEB7FD001774DD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFDCFFE23BEB7FD001774DD /* SceneDelegate.swift */; };
@@ -23,7 +23,7 @@
 		0835A20F174E3A82F6E15518 /* Pods-iCache.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iCache.debug.xcconfig"; path = "Target Support Files/Pods-iCache/Pods-iCache.debug.xcconfig"; sourceTree = "<group>"; };
 		21C7C7C8A309C6C732F122AB /* Pods-iCache.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iCache.release.xcconfig"; path = "Target Support Files/Pods-iCache/Pods-iCache.release.xcconfig"; sourceTree = "<group>"; };
 		ED14C66B23BEE69100E3C427 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		ED14C66F23BEE72D00E3C427 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		ED19E56323BEEEAD00DB7B7E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		ED87BC9D23BED5AF002BFCAA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		EDFDCFF923BEB7FD001774DD /* iCache.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iCache.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDFDCFFC23BEB7FD001774DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -118,7 +118,7 @@
 		EDFDD01223BEB83E001774DD /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				ED14C66F23BEE72D00E3C427 /* LoginViewController.swift */,
+				ED19E56323BEEEAD00DB7B7E /* LoginViewController.swift */,
 				EDFDD00023BEB7FD001774DD /* WelcomeViewController.swift */,
 			);
 			path = Controllers;
@@ -243,7 +243,7 @@
 				EDFDD00123BEB7FD001774DD /* WelcomeViewController.swift in Sources */,
 				EDFDCFFD23BEB7FD001774DD /* AppDelegate.swift in Sources */,
 				EDFDCFFF23BEB7FD001774DD /* SceneDelegate.swift in Sources */,
-				ED14C67023BEE72D00E3C427 /* LoginViewController.swift in Sources */,
+				ED19E56423BEEEAD00DB7B7E /* LoginViewController.swift in Sources */,
 				ED87BC9E23BED5AF002BFCAA /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

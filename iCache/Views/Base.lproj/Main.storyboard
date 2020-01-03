@@ -96,7 +96,7 @@
         <scene sceneID="GsT-fj-mNz">
             <objects>
                 <viewController id="2vV-oG-7eh" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="LzN-c5-SD9" customClass="LoginViewController">
+                    <view key="view" contentMode="scaleToFill" id="LzN-c5-SD9" customClass="LoginViewController" customModule="iCache" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -125,6 +125,9 @@
                                 <state key="normal" title="Button">
                                     <color key="titleColor" name="BrandLightBlue"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginPressed:" destination="LzN-c5-SD9" eventType="touchUpInside" id="CmZ-2d-lbM"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" name="BrandLightBlue"/>
@@ -140,6 +143,10 @@
                             <constraint firstItem="CkE-GT-wAO" firstAttribute="trailing" secondItem="EES-D3-evI" secondAttribute="trailing" constant="125" id="kvV-EZ-TBm"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="CkE-GT-wAO"/>
+                        <connections>
+                            <outlet property="emailTextField" destination="Lex-fE-A1v" id="mvZ-Oz-bkM"/>
+                            <outlet property="passwordTextField" destination="8v8-6t-5ac" id="wNO-Pi-rqa"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="kok-1W-GBY"/>
                 </viewController>
