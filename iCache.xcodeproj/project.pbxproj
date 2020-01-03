@@ -3,15 +3,17 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		860D1ED85C34AF8C6D52A1DB /* Pods_iCache.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9CA5BC589B7038336018E50 /* Pods_iCache.framework */; };
+		ED14C66C23BEE69100E3C427 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED14C66A23BEE69100E3C427 /* Main.storyboard */; };
+		ED14C67023BEE72D00E3C427 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED14C66F23BEE72D00E3C427 /* LoginViewController.swift */; };
+		ED87BC9E23BED5AF002BFCAA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED87BC9D23BED5AF002BFCAA /* Constants.swift */; };
 		EDFDCFFD23BEB7FD001774DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFDCFFC23BEB7FD001774DD /* AppDelegate.swift */; };
 		EDFDCFFF23BEB7FD001774DD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFDCFFE23BEB7FD001774DD /* SceneDelegate.swift */; };
-		EDFDD00123BEB7FD001774DD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFDD00023BEB7FD001774DD /* ViewController.swift */; };
-		EDFDD00423BEB7FD001774DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDFDD00223BEB7FD001774DD /* Main.storyboard */; };
+		EDFDD00123BEB7FD001774DD /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFDD00023BEB7FD001774DD /* WelcomeViewController.swift */; };
 		EDFDD00623BEB7FF001774DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDFDD00523BEB7FF001774DD /* Assets.xcassets */; };
 		EDFDD00923BEB7FF001774DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDFDD00723BEB7FF001774DD /* LaunchScreen.storyboard */; };
 		EDFDD01423BEB940001774DD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EDFDD01323BEB940001774DD /* GoogleService-Info.plist */; };
@@ -20,11 +22,13 @@
 /* Begin PBXFileReference section */
 		0835A20F174E3A82F6E15518 /* Pods-iCache.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iCache.debug.xcconfig"; path = "Target Support Files/Pods-iCache/Pods-iCache.debug.xcconfig"; sourceTree = "<group>"; };
 		21C7C7C8A309C6C732F122AB /* Pods-iCache.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iCache.release.xcconfig"; path = "Target Support Files/Pods-iCache/Pods-iCache.release.xcconfig"; sourceTree = "<group>"; };
+		ED14C66B23BEE69100E3C427 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		ED14C66F23BEE72D00E3C427 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		ED87BC9D23BED5AF002BFCAA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		EDFDCFF923BEB7FD001774DD /* iCache.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iCache.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDFDCFFC23BEB7FD001774DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDFDCFFE23BEB7FD001774DD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EDFDD00023BEB7FD001774DD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		EDFDD00323BEB7FD001774DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EDFDD00023BEB7FD001774DD /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		EDFDD00523BEB7FF001774DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EDFDD00823BEB7FF001774DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EDFDD00A23BEB7FF001774DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -58,7 +62,6 @@
 				0835A20F174E3A82F6E15518 /* Pods-iCache.debug.xcconfig */,
 				21C7C7C8A309C6C732F122AB /* Pods-iCache.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -85,6 +88,7 @@
 			children = (
 				EDFDCFFC23BEB7FD001774DD /* AppDelegate.swift */,
 				EDFDCFFE23BEB7FD001774DD /* SceneDelegate.swift */,
+				ED87BC9D23BED5AF002BFCAA /* Constants.swift */,
 				EDFDD01023BEB831001774DD /* Models */,
 				EDFDD01123BEB83A001774DD /* Views */,
 				EDFDD01223BEB83E001774DD /* Controllers */,
@@ -106,7 +110,7 @@
 		EDFDD01123BEB83A001774DD /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				EDFDD00223BEB7FD001774DD /* Main.storyboard */,
+				ED14C66A23BEE69100E3C427 /* Main.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -114,7 +118,8 @@
 		EDFDD01223BEB83E001774DD /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				EDFDD00023BEB7FD001774DD /* ViewController.swift */,
+				ED14C66F23BEE72D00E3C427 /* LoginViewController.swift */,
+				EDFDD00023BEB7FD001774DD /* WelcomeViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -182,7 +187,7 @@
 				EDFDD00923BEB7FF001774DD /* LaunchScreen.storyboard in Resources */,
 				EDFDD01423BEB940001774DD /* GoogleService-Info.plist in Resources */,
 				EDFDD00623BEB7FF001774DD /* Assets.xcassets in Resources */,
-				EDFDD00423BEB7FD001774DD /* Main.storyboard in Resources */,
+				ED14C66C23BEE69100E3C427 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,19 +240,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDFDD00123BEB7FD001774DD /* ViewController.swift in Sources */,
+				EDFDD00123BEB7FD001774DD /* WelcomeViewController.swift in Sources */,
 				EDFDCFFD23BEB7FD001774DD /* AppDelegate.swift in Sources */,
 				EDFDCFFF23BEB7FD001774DD /* SceneDelegate.swift in Sources */,
+				ED14C67023BEE72D00E3C427 /* LoginViewController.swift in Sources */,
+				ED87BC9E23BED5AF002BFCAA /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		EDFDD00223BEB7FD001774DD /* Main.storyboard */ = {
+		ED14C66A23BEE69100E3C427 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				EDFDD00323BEB7FD001774DD /* Base */,
+				ED14C66B23BEE69100E3C427 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -384,7 +391,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = iCache/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -403,7 +410,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = iCache/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
