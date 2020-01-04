@@ -25,5 +25,7 @@ struct K {
     struct Segues {
         static let loginSegue = "LoginToMain"
         static let forgotPasswordSegue = "LoginToResetPassword"
+        static let registerSegue = "RegisterToVerify"
+        static let verifySegue = "VerifyToWelcome"
     }
 }
