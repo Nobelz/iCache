@@ -18,15 +18,25 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordButton: UIButton!
     
     @IBOutlet weak var errorLabel: UILabel!
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        title = K.appName + " Login"
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = K.appName + " Login"
-        
         passwordTextField.delegate = self
         emailTextField.delegate = self
         passwordButton.titleLabel?.textAlignment = .center
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        title = "Back"
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -44,20 +54,28 @@ class LoginViewController: UIViewController {
                     }
                     return
                 } else {
-                    self.performSegue(withIdentifier: K.Segues.loginSegue, sender: self)
+                    if Auth.auth().currentUser?.isEmailVerified ?? false {
+                        self.performSegue(withIdentifier: K.Segues.loginSegue, sender: self)
+                    } else {
+                        DispatchQueue.main.async {
+                            self.setError(NSError(domain: "Yeah pls verify ok thx", code: 17001, userInfo: nil))
+                        }
+                    }
                 }
             }
         }
     }
     
-    @IBAction func forgotPasswordPressed(_ sender: UIButton) {
-        self.performSegue(withIdentifier: K.Segues.forgotPasswordSegue, sender: self)
+    @IBAction func forgetPasswordPressed(_ sender: UIButton) {
+      
     }
-    
+
     func setError(_ error: NSError) {
         let red = UIColor.red.cgColor
         
         switch error.code {
+            case 17001:
+                self.performSegue(withIdentifier: K.Segues.loginVerifySegue, sender: self)
             case 17008: //Invalid email
                 emailTextField.layer.borderWidth = 1
                 emailTextField.layer.borderColor = red
@@ -67,7 +85,7 @@ class LoginViewController: UIViewController {
                 passwordTextField.layer.borderWidth = 1
                 passwordTextField.layer.borderColor = red
             
-                errorLabel.text = "Password is invalid."
+                errorLabel.text = "Password is invalid. Click \"Forgot Password?\" to reset your password."
             case 17011:
                 emailTextField.layer.borderWidth = 1
                 emailTextField.layer.borderColor = red
@@ -79,6 +97,13 @@ class LoginViewController: UIViewController {
         
         passwordTextField.resignFirstResponder()
         emailTextField.resignFirstResponder()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let verifyController = segue.destination as? VerifyViewController {
+            let email = emailTextField.text
+            verifyController.email = email
+        }
     }
 }
 

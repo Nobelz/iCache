@@ -10,6 +10,8 @@
 		860D1ED85C34AF8C6D52A1DB /* Pods_iCache.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9CA5BC589B7038336018E50 /* Pods_iCache.framework */; };
 		ED14C66C23BEE69100E3C427 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED14C66A23BEE69100E3C427 /* Main.storyboard */; };
 		ED87BC9E23BED5AF002BFCAA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED87BC9D23BED5AF002BFCAA /* Constants.swift */; };
+		EDE1359723C0E03A002D4D07 /* VerifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE1359623C0E03A002D4D07 /* VerifyViewController.swift */; };
+		EDE1359923C0E914002D4D07 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE1359823C0E914002D4D07 /* ForgotPasswordViewController.swift */; };
 		EDE161F523BFA9C70049272C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE161F423BFA9C70049272C /* LoginViewController.swift */; };
 		EDEC33FF23BFC49A00AD2BEE /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEC33FE23BFC49A00AD2BEE /* RegisterViewController.swift */; };
 		EDFDCFFD23BEB7FD001774DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFDCFFC23BEB7FD001774DD /* AppDelegate.swift */; };
@@ -25,6 +27,8 @@
 		21C7C7C8A309C6C732F122AB /* Pods-iCache.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iCache.release.xcconfig"; path = "Target Support Files/Pods-iCache/Pods-iCache.release.xcconfig"; sourceTree = "<group>"; };
 		ED14C66B23BEE69100E3C427 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ED87BC9D23BED5AF002BFCAA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		EDE1359623C0E03A002D4D07 /* VerifyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyViewController.swift; sourceTree = "<group>"; };
+		EDE1359823C0E914002D4D07 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		EDE161F423BFA9C70049272C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		EDEC33FE23BFC49A00AD2BEE /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		EDFDCFF923BEB7FD001774DD /* iCache.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iCache.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,6 +127,8 @@
 				EDFDD00023BEB7FD001774DD /* WelcomeViewController.swift */,
 				EDE161F423BFA9C70049272C /* LoginViewController.swift */,
 				EDEC33FE23BFC49A00AD2BEE /* RegisterViewController.swift */,
+				EDE1359623C0E03A002D4D07 /* VerifyViewController.swift */,
+				EDE1359823C0E914002D4D07 /* ForgotPasswordViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -243,12 +249,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDE1359923C0E914002D4D07 /* ForgotPasswordViewController.swift in Sources */,
 				EDFDD00123BEB7FD001774DD /* WelcomeViewController.swift in Sources */,
 				EDFDCFFD23BEB7FD001774DD /* AppDelegate.swift in Sources */,
 				EDFDCFFF23BEB7FD001774DD /* SceneDelegate.swift in Sources */,
 				EDEC33FF23BFC49A00AD2BEE /* RegisterViewController.swift in Sources */,
 				EDE161F523BFA9C70049272C /* LoginViewController.swift in Sources */,
 				ED87BC9E23BED5AF002BFCAA /* Constants.swift in Sources */,
+				EDE1359723C0E03A002D4D07 /* VerifyViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

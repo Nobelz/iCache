@@ -49,11 +49,26 @@ class RegisterViewController: UIViewController {
                         }
                         return
                     } else {
-                        self.performSegue(withIdentifier: K.Segues.registerSegue, sender: self)
+                        Auth.auth().currentUser?.sendEmailVerification { (error) in
+                            if let e = error {
+                                DispatchQueue.main.async {
+                                    self.setError(e as NSError)
+                                }
+                                return
+                            }
+                            
+                            self.performSegue(withIdentifier: K.Segues.registerSegue, sender: self)
+                        }
                     }
                 }
             }
         }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let verifyController = segue.destination as! VerifyViewController
+        let email = emailTextField.text
+        verifyController.email = email
     }
     
     func setError(_ error: NSError?) {
