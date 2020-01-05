@@ -21,7 +21,7 @@ class RegisterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = K.appName + " Register"
+        title = "Register"
         
         passwordTextField.delegate = self
         emailTextField.delegate = self
@@ -57,18 +57,18 @@ class RegisterViewController: UIViewController {
                                 return
                             }
                             
-                            self.performSegue(withIdentifier: K.Segues.registerSegue, sender: self)
+                            let alertController = UIAlertController(title: "Email Verification Required", message: "Please check your email at " + email + " to verify your account.", preferredStyle: .alert)
+                            alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { (alertAction) in
+                                DispatchQueue.main.async {
+                                    self.navigationController?.popToRootViewController(animated: true)
+                                }
+                            }))
+                            self.present(alertController, animated: true, completion: nil)
                         }
                     }
                 }
             }
         }
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let verifyController = segue.destination as! VerifyViewController
-        let email = emailTextField.text
-        verifyController.email = email
     }
     
     func setError(_ error: NSError?) {

@@ -18,29 +18,18 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordButton: UIButton!
     
     @IBOutlet weak var errorLabel: UILabel!
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        title = K.appName + " Login"
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        title = "Login"
         passwordTextField.delegate = self
         emailTextField.delegate = self
         passwordButton.titleLabel?.textAlignment = .center
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        title = "Back"
-    }
-    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
         passwordTextField.endEditing(true)
         emailTextField.endEditing(true)
     }
@@ -58,7 +47,7 @@ class LoginViewController: UIViewController {
                         self.performSegue(withIdentifier: K.Segues.loginSegue, sender: self)
                     } else {
                         DispatchQueue.main.async {
-                            self.setError(NSError(domain: "Yeah pls verify ok thx", code: 17001, userInfo: nil))
+                            self.setError(NSError(domain: email, code: 17001, userInfo: nil))
                         }
                     }
                 }
@@ -75,7 +64,13 @@ class LoginViewController: UIViewController {
         
         switch error.code {
             case 17001:
-                self.performSegue(withIdentifier: K.Segues.loginVerifySegue, sender: self)
+                let alertController = UIAlertController(title: "Email Verification Required", message: "Please check your email at " + error.domain + " to verify your account.", preferredStyle: .alert)
+                alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { (alertAction) in
+                    DispatchQueue.main.async {
+                        self.navigationController?.popToRootViewController(animated: true)
+                    }
+                }))
+                self.present(alertController, animated: true, completion: nil)
             case 17008: //Invalid email
                 emailTextField.layer.borderWidth = 1
                 emailTextField.layer.borderColor = red
@@ -97,13 +92,6 @@ class LoginViewController: UIViewController {
         
         passwordTextField.resignFirstResponder()
         emailTextField.resignFirstResponder()
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let verifyController = segue.destination as? VerifyViewController {
-            let email = emailTextField.text
-            verifyController.email = email
-        }
     }
 }
 

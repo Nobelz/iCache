@@ -10,7 +10,6 @@ import Foundation
 
 struct K {
     static let appName = "🌎iCache🌍"
-    static let verifyMessage = "Your email must be verified first. Please check your email at:"
     
     struct BrandColors {
         static let blue = "BrandBlue"
