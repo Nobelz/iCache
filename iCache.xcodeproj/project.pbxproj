@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		860D1ED85C34AF8C6D52A1DB /* Pods_iCache.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9CA5BC589B7038336018E50 /* Pods_iCache.framework */; };
 		ED14C66C23BEE69100E3C427 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED14C66A23BEE69100E3C427 /* Main.storyboard */; };
+		ED6A839223C2C62300A9D470 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6A839123C2C62300A9D470 /* MainViewController.swift */; };
 		ED87BC9E23BED5AF002BFCAA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED87BC9D23BED5AF002BFCAA /* Constants.swift */; };
 		EDE1359923C0E914002D4D07 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE1359823C0E914002D4D07 /* ForgotPasswordViewController.swift */; };
 		EDE161F523BFA9C70049272C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE161F423BFA9C70049272C /* LoginViewController.swift */; };
@@ -25,6 +26,7 @@
 		0835A20F174E3A82F6E15518 /* Pods-iCache.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iCache.debug.xcconfig"; path = "Target Support Files/Pods-iCache/Pods-iCache.debug.xcconfig"; sourceTree = "<group>"; };
 		21C7C7C8A309C6C732F122AB /* Pods-iCache.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iCache.release.xcconfig"; path = "Target Support Files/Pods-iCache/Pods-iCache.release.xcconfig"; sourceTree = "<group>"; };
 		ED14C66B23BEE69100E3C427 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		ED6A839123C2C62300A9D470 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		ED87BC9D23BED5AF002BFCAA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		EDE1359823C0E914002D4D07 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		EDE161F423BFA9C70049272C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				EDE161F423BFA9C70049272C /* LoginViewController.swift */,
 				EDEC33FE23BFC49A00AD2BEE /* RegisterViewController.swift */,
 				EDE1359823C0E914002D4D07 /* ForgotPasswordViewController.swift */,
+				ED6A839123C2C62300A9D470 /* MainViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -253,6 +256,7 @@
 				EDEC33FF23BFC49A00AD2BEE /* RegisterViewController.swift in Sources */,
 				EDE161F523BFA9C70049272C /* LoginViewController.swift in Sources */,
 				ED87BC9E23BED5AF002BFCAA /* Constants.swift in Sources */,
+				ED6A839223C2C62300A9D470 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,7 +332,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -382,7 +386,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -401,7 +405,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PR54WWZX5J;
 				INFOPLIST_FILE = iCache/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -423,7 +427,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PR54WWZX5J;
 				INFOPLIST_FILE = iCache/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

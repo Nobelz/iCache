@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EJk-Vt-Nxg">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -70,6 +69,7 @@
                     <navigationItem key="navigationItem" id="wjf-uK-wys"/>
                     <connections>
                         <outlet property="titleLabel" destination="oP3-ds-oS3" id="ljR-cx-iyB"/>
+                        <segue destination="z4c-eX-rNP" kind="show" identifier="WelcomeToMain" id="ZPh-bL-iqi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -212,7 +212,6 @@
                                     <color key="titleColor" name="BrandRed"/>
                                 </state>
                                 <connections>
-                                    <action selector="forgetPasswordPressed:" destination="2vV-oG-7eh" eventType="touchUpInside" id="vTl-oA-Ak1"/>
                                     <segue destination="gwg-Nt-4kU" kind="show" id="DkC-NY-zPc"/>
                                 </connections>
                             </button>
@@ -252,7 +251,7 @@
                         <outlet property="errorLabel" destination="YYF-yQ-daZ" id="B29-if-drt"/>
                         <outlet property="passwordButton" destination="jw0-Gh-xDc" id="Emm-TN-jAH"/>
                         <outlet property="passwordTextField" destination="8v8-6t-5ac" id="ykO-fC-ckG"/>
-                        <segue destination="26J-ap-3ST" kind="show" identifier="LoginToMain" id="GHm-Tn-U0K"/>
+                        <segue destination="z4c-eX-rNP" kind="show" identifier="LoginToMain" id="Gbi-HM-MIi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R6p-0N-PMN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -333,21 +332,56 @@
             </objects>
             <point key="canvasLocation" x="4703" y="1594"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="4hq-QW-1fq">
+        <!--Map-->
+        <scene sceneID="tPU-z2-0aV">
             <objects>
-                <viewController id="26J-ap-3ST" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="uK6-t0-U9h">
+                <viewController id="lz2-kL-rYp" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ta0-ak-aVM">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="dij-7Q-iOH"/>
+                        <viewLayoutGuide key="safeArea" id="dzu-wR-fXM"/>
                     </view>
-                    <navigationItem key="navigationItem" id="fcZ-qC-6Rv"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="map" catalog="system" id="Ycd-fl-t97"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Zks-oe-H1b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KRV-qU-zmu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7249" y="645"/>
+            <point key="canvasLocation" x="9773" y="1683"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="nar-js-qMV">
+            <objects>
+                <viewController id="WuK-rS-bw4" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="83u-uq-8F3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="6TD-Xh-Iys"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Profile" image="person.crop.circle" catalog="system" id="7A4-Ja-00y"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rlx-4A-JsL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8728" y="1683"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="XnB-Qw-xqq">
+            <objects>
+                <tabBarController id="z4c-eX-rNP" customClass="MainViewController" customModule="iCache" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="GO5-ID-qOv"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="osf-MD-r84">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="WuK-rS-bw4" kind="relationship" relationship="viewControllers" id="QiH-CC-AeG"/>
+                        <segue destination="lz2-kL-rYp" kind="relationship" relationship="viewControllers" id="fQ8-Ow-dOS"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Bn-9L-lsM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="10461" y="644"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="oga-d1-WK1">
@@ -372,6 +406,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="map" catalog="system" width="64" height="56"/>
+        <image name="person.crop.circle" catalog="system" width="64" height="60"/>
         <namedColor name="BrandBlue">
             <color red="0.16599999368190765" green="0.39899998903274536" blue="0.86900001764297485" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -391,4 +427,7 @@
             <color red="1" green="0.10300000011920929" blue="0.335999995470047" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Gbi-HM-MIi"/>
+    </inferredMetricsTieBreakers>
 </document>

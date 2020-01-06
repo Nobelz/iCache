@@ -7,15 +7,17 @@
 //
 
 import UIKit
+import Firebase
 
 class WelcomeViewController: UIViewController {
         
     @IBOutlet var titleLabel: UILabel!
     
+    
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.isNavigationBarHidden = true
-        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -28,6 +30,14 @@ class WelcomeViewController: UIViewController {
         
         navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
         titleLabel.text = K.appName
+        
+        _ = Auth.auth().addStateDidChangeListener { (auth, user) in
+            if Auth.auth().currentUser != nil {
+                DispatchQueue.main.async {
+                    self.performSegue(withIdentifier: K.Segues.directLoginSegue, sender: self)
+                }
+            }
+        }
     }
     
     @IBAction func registerPressed(_ sender: UIButton) {

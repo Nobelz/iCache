@@ -23,8 +23,7 @@ struct K {
     }
     
     struct Segues {
+        static let directLoginSegue = "WelcomeToMain"
         static let loginSegue = "LoginToMain"
-        static let registerSegue = "RegisterToVerify"
-        static let loginVerifySegue = "LoginToVerify"
     }
 }

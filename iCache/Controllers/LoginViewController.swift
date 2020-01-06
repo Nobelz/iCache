@@ -54,10 +54,6 @@ class LoginViewController: UIViewController {
             }
         }
     }
-    
-    @IBAction func forgetPasswordPressed(_ sender: UIButton) {
-      
-    }
 
     func setError(_ error: NSError) {
         let red = UIColor.red.cgColor

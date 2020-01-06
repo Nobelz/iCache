@@ -1,9 +1,9 @@
-platform :ios, '11.0'
+platform :ios, '13.0'
 
 target 'iCache' do
   	use_frameworks!
 
   	pod 'Firebase/Analytics'
-	pod 'Firebase/Auth'
-	pod 'Firebase/Firestore'
+    pod 'Firebase/Auth'
+    pod 'Firebase/Firestore'
 end
