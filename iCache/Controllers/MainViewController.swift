@@ -7,16 +7,16 @@
 //
 
 import UIKit
+import CoreLocation
+import Firebase
 
 class MainViewController: UITabBarController {
+    
+    let locationManager = CLLocationManager()
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
         navigationController?.isNavigationBarHidden = true
-        
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
     }
 }

@@ -13,7 +13,7 @@ class WelcomeViewController: UIViewController {
         
     @IBOutlet var titleLabel: UILabel!
     
-    
+    let db = Firestore.firestore()
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -31,10 +31,21 @@ class WelcomeViewController: UIViewController {
         navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
         titleLabel.text = K.appName
         
-        _ = Auth.auth().addStateDidChangeListener { (auth, user) in
+        Auth.auth().addStateDidChangeListener { (auth, user) in
             if Auth.auth().currentUser != nil {
-                DispatchQueue.main.async {
-                    self.performSegue(withIdentifier: K.Segues.directLoginSegue, sender: self)
+                self.db.collection("users").whereField("email", isEqualTo: Auth.auth().currentUser!.email!)
+                    .getDocuments { (querySnapshot, error) in
+                        if let error = error {
+                            print(error)
+                        } else {
+                            DispatchQueue.main.async {
+                                if querySnapshot!.documents.count == 0 {
+                                    self.performSegue(withIdentifier: K.Segues.directSetupSegue, sender: self)
+                                } else {
+                                    self.performSegue(withIdentifier: K.Segues.directLoginSegue, sender: self)
+                                }
+                            }
+                        }
                 }
             }
         }

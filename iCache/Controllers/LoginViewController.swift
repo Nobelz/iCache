@@ -12,12 +12,11 @@ import Firebase
 class LoginViewController: UIViewController {
     
     @IBOutlet weak var emailTextField: UITextField!
-    
     @IBOutlet weak var passwordTextField: UITextField!
-    
     @IBOutlet weak var passwordButton: UIButton!
-    
     @IBOutlet weak var errorLabel: UILabel!
+    
+    let db = Firestore.firestore()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,7 +43,20 @@ class LoginViewController: UIViewController {
                     return
                 } else {
                     if Auth.auth().currentUser?.isEmailVerified ?? false {
-                        self.performSegue(withIdentifier: K.Segues.loginSegue, sender: self)
+                        self.db.collection("users").whereField("email", isEqualTo: Auth.auth().currentUser!.email!)
+                            .getDocuments { (querySnapshot, error) in
+                                if let error = error {
+                                    print(error)
+                                } else {
+                                    DispatchQueue.main.async {
+                                        if querySnapshot!.documents.count == 0 {
+                                            self.performSegue(withIdentifier: K.Segues.setupSegue, sender: self)
+                                        } else {
+                                            self.performSegue(withIdentifier: K.Segues.loginSegue, sender: self)
+                                        }
+                                    }
+                                }
+                            }
                     } else {
                         DispatchQueue.main.async {
                             self.setError(NSError(domain: email, code: 17001, userInfo: nil))

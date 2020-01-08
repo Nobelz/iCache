@@ -51,6 +51,10 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>iCache needs your location to navigate to nearby geocaches!</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>iCache needs your location to locate you on a geocaching map!</string>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

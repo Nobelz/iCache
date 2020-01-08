@@ -10,6 +10,8 @@ import Foundation
 
 struct K {
     static let appName = "🌎iCache🌍"
+    static let moreCellNibName = "MoreTableViewCell"
+    static let cellIdentifier = "ReusableCell"
     
     struct BrandColors {
         static let blue = "BrandBlue"
@@ -25,5 +27,8 @@ struct K {
     struct Segues {
         static let directLoginSegue = "WelcomeToMain"
         static let loginSegue = "LoginToMain"
+        static let directSetupSegue = "WelcomeToSetup"
+        static let setupSegue = "LoginToSetup"
+        static let finishSetupSegue = "SetupToMain"
     }
 }

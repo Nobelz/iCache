@@ -11,6 +11,13 @@
 		ED14C66C23BEE69100E3C427 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED14C66A23BEE69100E3C427 /* Main.storyboard */; };
 		ED6A839223C2C62300A9D470 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6A839123C2C62300A9D470 /* MainViewController.swift */; };
 		ED87BC9E23BED5AF002BFCAA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED87BC9D23BED5AF002BFCAA /* Constants.swift */; };
+		ED91C16223C4F02900192CCE /* Geocache.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED91C16123C4F02900192CCE /* Geocache.swift */; };
+		EDA6C21623C3673800476B42 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA6C21523C3673800476B42 /* MapViewController.swift */; };
+		EDA8E97623C52D0E00D47351 /* MoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA8E97423C52D0E00D47351 /* MoreTableViewCell.swift */; };
+		EDA8E97723C52D0E00D47351 /* MoreTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDA8E97523C52D0E00D47351 /* MoreTableViewCell.xib */; };
+		EDA8E97923C52EA500D47351 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA8E97823C52EA500D47351 /* MoreViewController.swift */; };
+		EDA8E97B23C57A3A00D47351 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA8E97A23C57A3A00D47351 /* Profile.swift */; };
+		EDA8E97D23C57C0000D47351 /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA8E97C23C57C0000D47351 /* SetupViewController.swift */; };
 		EDE1359923C0E914002D4D07 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE1359823C0E914002D4D07 /* ForgotPasswordViewController.swift */; };
 		EDE161F523BFA9C70049272C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE161F423BFA9C70049272C /* LoginViewController.swift */; };
 		EDEC33FF23BFC49A00AD2BEE /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEC33FE23BFC49A00AD2BEE /* RegisterViewController.swift */; };
@@ -28,6 +35,13 @@
 		ED14C66B23BEE69100E3C427 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ED6A839123C2C62300A9D470 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		ED87BC9D23BED5AF002BFCAA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		ED91C16123C4F02900192CCE /* Geocache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Geocache.swift; sourceTree = "<group>"; };
+		EDA6C21523C3673800476B42 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		EDA8E97423C52D0E00D47351 /* MoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreTableViewCell.swift; sourceTree = "<group>"; };
+		EDA8E97523C52D0E00D47351 /* MoreTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoreTableViewCell.xib; sourceTree = "<group>"; };
+		EDA8E97823C52EA500D47351 /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
+		EDA8E97A23C57A3A00D47351 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		EDA8E97C23C57C0000D47351 /* SetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
 		EDE1359823C0E914002D4D07 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		EDE161F423BFA9C70049272C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		EDEC33FE23BFC49A00AD2BEE /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +123,8 @@
 		EDFDD01023BEB831001774DD /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				ED91C16123C4F02900192CCE /* Geocache.swift */,
+				EDA8E97A23C57A3A00D47351 /* Profile.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -117,6 +133,8 @@
 			isa = PBXGroup;
 			children = (
 				ED14C66A23BEE69100E3C427 /* Main.storyboard */,
+				EDA8E97423C52D0E00D47351 /* MoreTableViewCell.swift */,
+				EDA8E97523C52D0E00D47351 /* MoreTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -129,6 +147,9 @@
 				EDEC33FE23BFC49A00AD2BEE /* RegisterViewController.swift */,
 				EDE1359823C0E914002D4D07 /* ForgotPasswordViewController.swift */,
 				ED6A839123C2C62300A9D470 /* MainViewController.swift */,
+				EDA6C21523C3673800476B42 /* MapViewController.swift */,
+				EDA8E97823C52EA500D47351 /* MoreViewController.swift */,
+				EDA8E97C23C57C0000D47351 /* SetupViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -194,6 +215,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDFDD00923BEB7FF001774DD /* LaunchScreen.storyboard in Resources */,
+				EDA8E97723C52D0E00D47351 /* MoreTableViewCell.xib in Resources */,
 				EDFDD01423BEB940001774DD /* GoogleService-Info.plist in Resources */,
 				EDFDD00623BEB7FF001774DD /* Assets.xcassets in Resources */,
 				ED14C66C23BEE69100E3C427 /* Main.storyboard in Resources */,
@@ -250,11 +272,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDE1359923C0E914002D4D07 /* ForgotPasswordViewController.swift in Sources */,
+				EDA8E97623C52D0E00D47351 /* MoreTableViewCell.swift in Sources */,
 				EDFDD00123BEB7FD001774DD /* WelcomeViewController.swift in Sources */,
+				EDA8E97B23C57A3A00D47351 /* Profile.swift in Sources */,
+				ED91C16223C4F02900192CCE /* Geocache.swift in Sources */,
 				EDFDCFFD23BEB7FD001774DD /* AppDelegate.swift in Sources */,
+				EDA8E97D23C57C0000D47351 /* SetupViewController.swift in Sources */,
 				EDFDCFFF23BEB7FD001774DD /* SceneDelegate.swift in Sources */,
+				EDA6C21623C3673800476B42 /* MapViewController.swift in Sources */,
 				EDEC33FF23BFC49A00AD2BEE /* RegisterViewController.swift in Sources */,
 				EDE161F523BFA9C70049272C /* LoginViewController.swift in Sources */,
+				EDA8E97923C52EA500D47351 /* MoreViewController.swift in Sources */,
 				ED87BC9E23BED5AF002BFCAA /* Constants.swift in Sources */,
 				ED6A839223C2C62300A9D470 /* MainViewController.swift in Sources */,
 			);
