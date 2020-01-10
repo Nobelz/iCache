@@ -13,8 +13,9 @@ import CoreLocation
 
 class MapViewController: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
-    
     @IBOutlet weak var locationButton: UIButton!
+    
+    var resultSearchController: UISearchController? = nil
     
     var mapChangedFromUserInteraction = false
     var timer = Timer()
@@ -22,6 +23,21 @@ class MapViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let locationSearchTable = storyboard!.instantiateViewController(withIdentifier: K.searchControllerId) as! SearchViewController
+        resultSearchController = UISearchController(searchResultsController: locationSearchTable)
+        resultSearchController?.searchResultsUpdater = locationSearchTable
+        
+        locationSearchTable.mapView = mapView
+        
+        let searchBar = resultSearchController!.searchBar
+        searchBar.sizeToFit()
+        searchBar.placeholder = "Search for places"
+        navigationItem.titleView = resultSearchController?.searchBar
+        
+        resultSearchController?.hidesNavigationBarDuringPresentation = false
+        resultSearchController?.obscuresBackgroundDuringPresentation = true
+        definesPresentationContext = true
         
         locationManager.delegate = self
         mapView.delegate = self

@@ -13,6 +13,7 @@ struct K {
     static let moreCellNibName = "MoreTableViewCell"
     static let logCellNibName = "ProfileCell"
     static let cellIdentifier = "ReusableCell"
+    static let searchControllerId = "LocationSearchTable"
     
     struct BrandColors {
         static let blue = "BrandBlue"
