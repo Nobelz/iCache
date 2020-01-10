@@ -75,6 +75,11 @@ class LoginViewController: UIViewController {
                 let alertController = UIAlertController(title: "Email Verification Required", message: "Please check your email at " + error.domain + " to verify your account.", preferredStyle: .alert)
                 alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { (alertAction) in
                     DispatchQueue.main.async {
+                        do {
+                            try Auth.auth().signOut()
+                        } catch {
+                            print(error)
+                        }
                         self.navigationController?.popToRootViewController(animated: true)
                     }
                 }))

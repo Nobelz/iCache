@@ -253,7 +253,7 @@
                         <outlet property="passwordButton" destination="jw0-Gh-xDc" id="Emm-TN-jAH"/>
                         <outlet property="passwordTextField" destination="8v8-6t-5ac" id="ykO-fC-ckG"/>
                         <segue destination="z4c-eX-rNP" kind="show" identifier="LoginToMain" animates="NO" id="Gbi-HM-MIi"/>
-                        <segue destination="W3T-oR-hHL" kind="show" identifier="LoginToSetup" id="jik-Rc-vpQ"/>
+                        <segue destination="W3T-oR-hHL" kind="show" identifier="LoginToSetup" animates="NO" id="jik-Rc-vpQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R6p-0N-PMN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -383,18 +383,73 @@
         <!--Profile-->
         <scene sceneID="nar-js-qMV">
             <objects>
-                <viewController id="WuK-rS-bw4" sceneMemberID="viewController">
+                <viewController id="WuK-rS-bw4" customClass="ProfileViewController" customModule="iCache" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="83u-uq-8F3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eoY-Ii-F2o">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="124.5"/>
+                                <color key="backgroundColor" name="BrandGreen"/>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="o5Z-kN-P6K">
+                                <rect key="frame" x="131.5" y="58.5" width="112.5" height="112.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="o5Z-kN-P6K" secondAttribute="height" multiplier="1:1" id="V8R-06-5O5"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xJx-fx-6MP">
+                                <rect key="frame" x="10" y="129.5" width="111.5" height="0.0"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OPr-vX-HIk">
+                                <rect key="frame" x="254" y="129.5" width="111" height="0.0"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9s6-El-8mb">
+                                <rect key="frame" x="75" y="181" width="225" height="0.0"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="OPr-vX-HIk" firstAttribute="top" secondItem="eoY-Ii-F2o" secondAttribute="bottom" constant="5" id="332-ig-8nd"/>
+                            <constraint firstItem="6TD-Xh-Iys" firstAttribute="trailing" secondItem="OPr-vX-HIk" secondAttribute="trailing" constant="10" id="5zS-Ai-z9J"/>
+                            <constraint firstItem="o5Z-kN-P6K" firstAttribute="leading" secondItem="xJx-fx-6MP" secondAttribute="trailing" constant="10" id="9Aa-qz-2x8"/>
+                            <constraint firstItem="xJx-fx-6MP" firstAttribute="leading" secondItem="6TD-Xh-Iys" secondAttribute="leading" constant="10" id="A5h-t8-IUs"/>
+                            <constraint firstItem="xJx-fx-6MP" firstAttribute="top" secondItem="eoY-Ii-F2o" secondAttribute="bottom" constant="5" id="B7j-Fb-hc8"/>
+                            <constraint firstItem="eoY-Ii-F2o" firstAttribute="top" secondItem="83u-uq-8F3" secondAttribute="top" id="DJ1-A6-A8r"/>
+                            <constraint firstItem="OPr-vX-HIk" firstAttribute="leading" secondItem="o5Z-kN-P6K" secondAttribute="trailing" constant="10" id="Dcc-ex-Gw2"/>
+                            <constraint firstItem="9s6-El-8mb" firstAttribute="leading" secondItem="6TD-Xh-Iys" secondAttribute="trailing" multiplier="0.2" id="LRr-de-8FE"/>
+                            <constraint firstItem="6TD-Xh-Iys" firstAttribute="trailing" secondItem="eoY-Ii-F2o" secondAttribute="trailing" id="Qs1-6o-844"/>
+                            <constraint firstItem="o5Z-kN-P6K" firstAttribute="trailing" secondItem="6TD-Xh-Iys" secondAttribute="trailing" multiplier="0.65" id="RNV-eb-fWR"/>
+                            <constraint firstItem="o5Z-kN-P6K" firstAttribute="centerY" secondItem="6TD-Xh-Iys" secondAttribute="bottom" multiplier="0.2" id="SNp-rK-g55"/>
+                            <constraint firstItem="o5Z-kN-P6K" firstAttribute="bottom" secondItem="OPr-vX-HIk" secondAttribute="bottom" constant="41.5" id="WT3-Cv-yYG"/>
+                            <constraint firstItem="9s6-El-8mb" firstAttribute="trailing" secondItem="6TD-Xh-Iys" secondAttribute="trailing" multiplier="0.8" id="azg-2y-kik"/>
+                            <constraint firstItem="o5Z-kN-P6K" firstAttribute="centerX" secondItem="83u-uq-8F3" secondAttribute="centerX" id="ebo-ac-7gk"/>
+                            <constraint firstItem="o5Z-kN-P6K" firstAttribute="leading" secondItem="6TD-Xh-Iys" secondAttribute="trailing" multiplier="0.35" id="fBV-Lr-crm"/>
+                            <constraint firstItem="eoY-Ii-F2o" firstAttribute="leading" secondItem="6TD-Xh-Iys" secondAttribute="leading" id="oxu-eX-gk9"/>
+                            <constraint firstItem="9s6-El-8mb" firstAttribute="top" secondItem="o5Z-kN-P6K" secondAttribute="bottom" constant="10" id="xhK-xf-AKF"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6TD-Xh-Iys"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="person.crop.circle" catalog="system" id="7A4-Ja-00y"/>
+                    <connections>
+                        <outlet property="dateCreatedLabel" destination="OPr-vX-HIk" id="2fq-2b-evb"/>
+                        <outlet property="geocachesFoundLabel" destination="xJx-fx-6MP" id="7u5-5D-3zD"/>
+                        <outlet property="profileImageView" destination="o5Z-kN-P6K" id="jGV-YF-pvf"/>
+                        <outlet property="usernameLabel" destination="9s6-El-8mb" id="cX1-TN-Fn5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rlx-4A-JsL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8728" y="1683"/>
+            <point key="canvasLocation" x="8727.2000000000007" y="1682.608695652174"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="XnB-Qw-xqq">
@@ -596,7 +651,7 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="bgY-8H-kmF"/>
-        <segue reference="JJq-oC-6H5"/>
+        <segue reference="jik-Rc-vpQ"/>
+        <segue reference="Gbi-HM-MIi"/>
     </inferredMetricsTieBreakers>
 </document>

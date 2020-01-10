@@ -11,6 +11,7 @@ import Foundation
 struct K {
     static let appName = "🌎iCache🌍"
     static let moreCellNibName = "MoreTableViewCell"
+    static let logCellNibName = "ProfileCell"
     static let cellIdentifier = "ReusableCell"
     
     struct BrandColors {

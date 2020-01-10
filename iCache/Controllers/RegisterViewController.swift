@@ -60,7 +60,12 @@ class RegisterViewController: UIViewController {
                             let alertController = UIAlertController(title: "Email Verification Required", message: "Please check your email at " + email + " to verify your account.", preferredStyle: .alert)
                             alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { (alertAction) in
                                 DispatchQueue.main.async {
-                                    self.navigationController?.popToRootViewController(animated: true)
+                                    do {
+                                        try Auth.auth().signOut()
+                                        self.navigationController?.popToRootViewController(animated: true)
+                                    } catch {
+                                        print(error)
+                                    }
                                 }
                             }))
                             self.present(alertController, animated: true, completion: nil)

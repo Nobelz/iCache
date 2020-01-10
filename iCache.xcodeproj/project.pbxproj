@@ -10,6 +10,7 @@
 		860D1ED85C34AF8C6D52A1DB /* Pods_iCache.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9CA5BC589B7038336018E50 /* Pods_iCache.framework */; };
 		ED14C66C23BEE69100E3C427 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED14C66A23BEE69100E3C427 /* Main.storyboard */; };
 		ED6A839223C2C62300A9D470 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6A839123C2C62300A9D470 /* MainViewController.swift */; };
+		ED85969723C6C928007E8599 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED85969623C6C928007E8599 /* ProfileViewController.swift */; };
 		ED87BC9E23BED5AF002BFCAA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED87BC9D23BED5AF002BFCAA /* Constants.swift */; };
 		ED91C16223C4F02900192CCE /* Geocache.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED91C16123C4F02900192CCE /* Geocache.swift */; };
 		EDA6C21623C3673800476B42 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA6C21523C3673800476B42 /* MapViewController.swift */; };
@@ -34,6 +35,7 @@
 		21C7C7C8A309C6C732F122AB /* Pods-iCache.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iCache.release.xcconfig"; path = "Target Support Files/Pods-iCache/Pods-iCache.release.xcconfig"; sourceTree = "<group>"; };
 		ED14C66B23BEE69100E3C427 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ED6A839123C2C62300A9D470 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		ED85969623C6C928007E8599 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		ED87BC9D23BED5AF002BFCAA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		ED91C16123C4F02900192CCE /* Geocache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Geocache.swift; sourceTree = "<group>"; };
 		EDA6C21523C3673800476B42 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 				EDA6C21523C3673800476B42 /* MapViewController.swift */,
 				EDA8E97823C52EA500D47351 /* MoreViewController.swift */,
 				EDA8E97C23C57C0000D47351 /* SetupViewController.swift */,
+				ED85969623C6C928007E8599 /* ProfileViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 				EDEC33FF23BFC49A00AD2BEE /* RegisterViewController.swift in Sources */,
 				EDE161F523BFA9C70049272C /* LoginViewController.swift in Sources */,
 				EDA8E97923C52EA500D47351 /* MoreViewController.swift in Sources */,
+				ED85969723C6C928007E8599 /* ProfileViewController.swift in Sources */,
 				ED87BC9E23BED5AF002BFCAA /* Constants.swift in Sources */,
 				ED6A839223C2C62300A9D470 /* MainViewController.swift in Sources */,
 			);

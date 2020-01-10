@@ -10,8 +10,8 @@ import UIKit
 
 struct Profile {
     var email: String
-    var profilePic: UIImage
-    var joinDate: Date
+    var profilePicURL: String
+    var joinDate: String
     var geocachesFound: Int
     var username: String
 }
