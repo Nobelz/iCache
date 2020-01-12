@@ -10,6 +10,7 @@
 		860D1ED85C34AF8C6D52A1DB /* Pods_iCache.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9CA5BC589B7038336018E50 /* Pods_iCache.framework */; };
 		ED148B0423C8311E00291A38 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED148B0323C8311E00291A38 /* SearchViewController.swift */; };
 		ED14C66C23BEE69100E3C427 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED14C66A23BEE69100E3C427 /* Main.storyboard */; };
+		ED4C7F3523C8CB6D0008E8DF /* GeocacheViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4C7F3423C8CB6D0008E8DF /* GeocacheViewController.swift */; };
 		ED6A839223C2C62300A9D470 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6A839123C2C62300A9D470 /* MainViewController.swift */; };
 		ED85969723C6C928007E8599 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED85969623C6C928007E8599 /* ProfileViewController.swift */; };
 		ED87BC9E23BED5AF002BFCAA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED87BC9D23BED5AF002BFCAA /* Constants.swift */; };
@@ -20,6 +21,7 @@
 		EDA8E97923C52EA500D47351 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA8E97823C52EA500D47351 /* MoreViewController.swift */; };
 		EDA8E97B23C57A3A00D47351 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA8E97A23C57A3A00D47351 /* Profile.swift */; };
 		EDA8E97D23C57C0000D47351 /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA8E97C23C57C0000D47351 /* SetupViewController.swift */; };
+		EDD14E4D23C8F1B5005022E1 /* NavigateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD14E4C23C8F1B5005022E1 /* NavigateViewController.swift */; };
 		EDE1359923C0E914002D4D07 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE1359823C0E914002D4D07 /* ForgotPasswordViewController.swift */; };
 		EDE161F523BFA9C70049272C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE161F423BFA9C70049272C /* LoginViewController.swift */; };
 		EDEC33FF23BFC49A00AD2BEE /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEC33FE23BFC49A00AD2BEE /* RegisterViewController.swift */; };
@@ -36,6 +38,7 @@
 		21C7C7C8A309C6C732F122AB /* Pods-iCache.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iCache.release.xcconfig"; path = "Target Support Files/Pods-iCache/Pods-iCache.release.xcconfig"; sourceTree = "<group>"; };
 		ED148B0323C8311E00291A38 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		ED14C66B23BEE69100E3C427 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		ED4C7F3423C8CB6D0008E8DF /* GeocacheViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeocacheViewController.swift; sourceTree = "<group>"; };
 		ED6A839123C2C62300A9D470 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		ED85969623C6C928007E8599 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		ED87BC9D23BED5AF002BFCAA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -46,6 +49,7 @@
 		EDA8E97823C52EA500D47351 /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		EDA8E97A23C57A3A00D47351 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		EDA8E97C23C57C0000D47351 /* SetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
+		EDD14E4C23C8F1B5005022E1 /* NavigateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigateViewController.swift; sourceTree = "<group>"; };
 		EDE1359823C0E914002D4D07 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		EDE161F423BFA9C70049272C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		EDEC33FE23BFC49A00AD2BEE /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -156,6 +160,8 @@
 				EDA8E97C23C57C0000D47351 /* SetupViewController.swift */,
 				ED85969623C6C928007E8599 /* ProfileViewController.swift */,
 				ED148B0323C8311E00291A38 /* SearchViewController.swift */,
+				ED4C7F3423C8CB6D0008E8DF /* GeocacheViewController.swift */,
+				EDD14E4C23C8F1B5005022E1 /* NavigateViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -292,7 +298,9 @@
 				EDA8E97923C52EA500D47351 /* MoreViewController.swift in Sources */,
 				ED85969723C6C928007E8599 /* ProfileViewController.swift in Sources */,
 				ED87BC9E23BED5AF002BFCAA /* Constants.swift in Sources */,
+				EDD14E4D23C8F1B5005022E1 /* NavigateViewController.swift in Sources */,
 				ED6A839223C2C62300A9D470 /* MainViewController.swift in Sources */,
+				ED4C7F3523C8CB6D0008E8DF /* GeocacheViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

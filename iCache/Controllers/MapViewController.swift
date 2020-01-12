@@ -21,6 +21,11 @@ class MapViewController: UIViewController {
     var timer = Timer()
     var locationManager = CLLocationManager()
     
+    let db = Firestore.firestore()
+    
+    var geocaches: [Geocache] = []
+    var selectedGeocache: Geocache? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -44,7 +49,50 @@ class MapViewController: UIViewController {
         
         locationButton.layer.cornerRadius = 0.5 * locationButton.bounds.size.width
         
+        loadGeocaches()
+        
         navigateToCurrentLocation()
+    }
+    
+    func loadGeocaches() {
+        db.collection("geocaches").getDocuments { (querySnapshot, error) in
+            if let error = error {
+                print(error)
+            } else {
+                if let snapshot = querySnapshot {
+                    let documents = snapshot.documents
+                    for document in documents {
+                        let data = document.data()
+                        
+                        let username = data["placedBy"] as! String
+                        let name = data["name"] as! String
+                        let date = data["datePlaced"] as! Double
+                        let datePlaced = Date(timeIntervalSince1970: date)
+                        let difficulty = data["difficulty"] as! Double
+                        let locationGeopoint = data["location"] as! GeoPoint
+                        let location = CLLocation(latitude: CLLocationDegrees(exactly: locationGeopoint.latitude)!, longitude: CLLocationDegrees(exactly: locationGeopoint.longitude)!)
+                        let numberOfFinds = data["numberOfFinds"] as! Int
+                        let hint1 = data["hint1"] as! String
+                        let hint2 = data["hint2"] as! String
+                        let hints: [String] = [hint1, hint2]
+                        
+                        let geocache = Geocache(name: name, placedBy: username, datePlaced: datePlaced, difficulty: difficulty, location: location, numberOfFinds: numberOfFinds, hints: hints)
+                        
+                        self.geocaches.append(geocache)
+                    }
+                    
+                    for geocache in self.geocaches {
+                        let coords = geocache.location.coordinate
+                        
+                        let anno = MKPointAnnotation()
+                        anno.coordinate = coords
+                        anno.title = "Geocache"
+                        
+                        self.mapView.addAnnotation(anno)
+                    }
+                }
+            }
+        }
     }
 
     func navigateToCurrentLocation() {
@@ -117,6 +165,49 @@ extension MapViewController: MKMapViewDelegate {
         if (mode == .none) {
             locationButton.tintColor = UIColor(named: K.BrandColors.gray)
             locationButton.setImage(UIImage(systemName: "location"), for: .normal)
+        }
+    }
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        if annotation is MKUserLocation {
+            return nil
+        }
+
+        let reuseId = "pin"
+        var pinView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseId) as? MKPinAnnotationView
+        
+        pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
+        pinView?.pinTintColor = UIColor.orange
+        pinView?.canShowCallout = true
+        
+        let smallSquare = CGSize(width: 30, height: 30)
+        
+        let button = UIButton(frame: CGRect(origin: CGPoint.zero, size: smallSquare))
+        button.setBackgroundImage(UIImage(systemName: "info.circle"), for: .normal)
+        button.addTarget(self, action: #selector(annotationClicked), for: .touchUpInside)
+        pinView?.leftCalloutAccessoryView = button
+        
+        let lat = annotation.coordinate.latitude
+        let lon = annotation.coordinate.longitude
+        
+        for geocache in geocaches {
+            if geocache.location.coordinate.longitude == lon && geocache.location.coordinate.latitude == lat {
+                selectedGeocache = geocache
+            }
+        }
+        
+        return pinView
+    }
+    
+    @objc func annotationClicked() {
+        performSegue(withIdentifier: K.Segues.geocacheSegue, sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == K.Segues.geocacheSegue {
+            if let viewController = segue.destination as? GeocacheViewController {
+                viewController.geocache = selectedGeocache
+            }
         }
     }
 }

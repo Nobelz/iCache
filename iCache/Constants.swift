@@ -14,6 +14,7 @@ struct K {
     static let logCellNibName = "ProfileCell"
     static let cellIdentifier = "ReusableCell"
     static let searchControllerId = "LocationSearchTable"
+    static let hintMessage = "Get closer to get more clues!"
     
     struct BrandColors {
         static let blue = "BrandBlue"
@@ -32,5 +33,7 @@ struct K {
         static let directSetupSegue = "WelcomeToSetup"
         static let setupSegue = "LoginToSetup"
         static let finishSetupSegue = "SetupToMain"
+        static let geocacheSegue = "MapToGeocache"
+        static let navigationSegue = "GeocacheToNavigate"
     }
 }
