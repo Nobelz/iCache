@@ -22,7 +22,7 @@
                                 <color key="textColor" name="BrandGreen"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MoL-Nd-5DE">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MoL-Nd-5DE">
                                 <rect key="frame" x="0.0" y="463" width="375" height="60"/>
                                 <color key="backgroundColor" name="BrandLightBlue"/>
                                 <constraints>
@@ -37,7 +37,7 @@
                                     <segue destination="vcz-Z6-7yH" kind="show" id="juj-cK-kjB"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kJB-Cj-SGY">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kJB-Cj-SGY">
                                 <rect key="frame" x="0.0" y="543" width="375" height="60"/>
                                 <color key="backgroundColor" name="BrandBlue"/>
                                 <constraints>
@@ -68,6 +68,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="wjf-uK-wys"/>
                     <connections>
+                        <outlet property="loginButton" destination="kJB-Cj-SGY" id="0J8-jl-tC4"/>
+                        <outlet property="registerButton" destination="MoL-Nd-5DE" id="1gN-em-UR1"/>
                         <outlet property="titleLabel" destination="oP3-ds-oS3" id="ljR-cx-iyB"/>
                         <segue destination="z4c-eX-rNP" kind="show" identifier="WelcomeToMain" id="ZPh-bL-iqi"/>
                         <segue destination="W3T-oR-hHL" kind="show" identifier="WelcomeToSetup" id="bgY-8H-kmF"/>
@@ -386,32 +388,32 @@
             <objects>
                 <viewController id="NA9-LM-aUC" customClass="GeocacheViewController" customModule="iCache" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fGC-ev-Lbq">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JFw-7J-yTH">
-                                <rect key="frame" x="187.5" y="216.5" width="0.0" height="0.0"/>
+                                <rect key="frame" x="187.5" y="218" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" name="ZapfDingbatsITC" family="Zapf Dingbats" pointSize="25"/>
                                 <color key="textColor" name="BrandBlue"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uze-7D-n3h">
-                                <rect key="frame" x="187.5" y="432.5" width="0.0" height="0.0"/>
+                                <rect key="frame" x="187.5" y="436" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" name="ZapfDingbatsITC" family="Zapf Dingbats" pointSize="20"/>
                                 <color key="textColor" name="BrandGray"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mqm-rk-Glt">
-                                <rect key="frame" x="187.5" y="346.5" width="0.0" height="0.0"/>
+                                <rect key="frame" x="187.5" y="348" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" name="ZapfDingbatsITC" family="Zapf Dingbats" pointSize="17"/>
                                 <color key="textColor" name="BrandRed"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <mapView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" mapType="hybrid" zoomEnabled="NO" scrollEnabled="NO" rotateEnabled="NO" pitchEnabled="NO" showsBuildings="NO" showsCompass="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IGk-DH-upT">
-                                <rect key="frame" x="0.0" y="44" width="375" height="141.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="187"/>
                             </mapView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="psW-9t-dUJ">
-                                <rect key="frame" x="56.5" y="246.5" width="262.5" height="40"/>
+                                <rect key="frame" x="56.5" y="248" width="262.5" height="40"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7hg-Hy-QqR">
                                         <rect key="frame" x="0.0" y="0.0" width="121" height="40"/>
@@ -441,7 +443,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="MhT-XE-A90">
-                                <rect key="frame" x="75" y="316.5" width="225" height="20"/>
+                                <rect key="frame" x="75" y="318" width="225" height="20"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Yg-Ow-LIp">
                                         <rect key="frame" x="0.0" y="0.0" width="44" height="20"/>
@@ -469,7 +471,7 @@
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uv4-qs-eq3">
-                                <rect key="frame" x="187.5" y="437.5" width="0.0" height="0.0"/>
+                                <rect key="frame" x="187.5" y="441" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" name="ZapfDingbatsITC" family="Zapf Dingbats" pointSize="14"/>
                                 <color key="textColor" name="BrandGray"/>
                                 <nil key="highlightedColor"/>
@@ -590,7 +592,7 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OPr-vX-HIk">
                                 <rect key="frame" x="254" y="129.5" width="111" height="0.0"/>
-                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="13"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -600,6 +602,16 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Geocache Log" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fFS-VK-H30">
+                                <rect key="frame" x="84" y="191" width="207.5" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7cD-Qd-uY4">
+                                <rect key="frame" x="0.0" y="237" width="375" height="337"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -610,15 +622,21 @@
                             <constraint firstItem="xJx-fx-6MP" firstAttribute="top" secondItem="eoY-Ii-F2o" secondAttribute="bottom" constant="5" id="B7j-Fb-hc8"/>
                             <constraint firstItem="eoY-Ii-F2o" firstAttribute="top" secondItem="83u-uq-8F3" secondAttribute="top" id="DJ1-A6-A8r"/>
                             <constraint firstItem="OPr-vX-HIk" firstAttribute="leading" secondItem="o5Z-kN-P6K" secondAttribute="trailing" constant="10" id="Dcc-ex-Gw2"/>
+                            <constraint firstItem="fFS-VK-H30" firstAttribute="centerX" secondItem="83u-uq-8F3" secondAttribute="centerX" id="JVa-cz-Unf"/>
+                            <constraint firstItem="fFS-VK-H30" firstAttribute="top" secondItem="9s6-El-8mb" secondAttribute="bottom" constant="10" id="JoB-Xc-hLe"/>
                             <constraint firstItem="9s6-El-8mb" firstAttribute="leading" secondItem="6TD-Xh-Iys" secondAttribute="trailing" multiplier="0.2" id="LRr-de-8FE"/>
                             <constraint firstItem="6TD-Xh-Iys" firstAttribute="trailing" secondItem="eoY-Ii-F2o" secondAttribute="trailing" id="Qs1-6o-844"/>
                             <constraint firstItem="o5Z-kN-P6K" firstAttribute="trailing" secondItem="6TD-Xh-Iys" secondAttribute="trailing" multiplier="0.65" id="RNV-eb-fWR"/>
                             <constraint firstItem="o5Z-kN-P6K" firstAttribute="centerY" secondItem="6TD-Xh-Iys" secondAttribute="bottom" multiplier="0.2" id="SNp-rK-g55"/>
                             <constraint firstItem="o5Z-kN-P6K" firstAttribute="bottom" secondItem="OPr-vX-HIk" secondAttribute="bottom" constant="41.5" id="WT3-Cv-yYG"/>
+                            <constraint firstItem="7cD-Qd-uY4" firstAttribute="top" secondItem="fFS-VK-H30" secondAttribute="bottom" constant="10" id="aOI-PB-eXY"/>
                             <constraint firstItem="9s6-El-8mb" firstAttribute="trailing" secondItem="6TD-Xh-Iys" secondAttribute="trailing" multiplier="0.8" id="azg-2y-kik"/>
+                            <constraint firstItem="6TD-Xh-Iys" firstAttribute="trailing" secondItem="7cD-Qd-uY4" secondAttribute="trailing" id="cIa-je-yXW"/>
+                            <constraint firstItem="7cD-Qd-uY4" firstAttribute="leading" secondItem="6TD-Xh-Iys" secondAttribute="leading" id="cQ1-2b-mcj"/>
                             <constraint firstItem="o5Z-kN-P6K" firstAttribute="centerX" secondItem="83u-uq-8F3" secondAttribute="centerX" id="ebo-ac-7gk"/>
                             <constraint firstItem="o5Z-kN-P6K" firstAttribute="leading" secondItem="6TD-Xh-Iys" secondAttribute="trailing" multiplier="0.35" id="fBV-Lr-crm"/>
                             <constraint firstItem="eoY-Ii-F2o" firstAttribute="leading" secondItem="6TD-Xh-Iys" secondAttribute="leading" id="oxu-eX-gk9"/>
+                            <constraint firstItem="6TD-Xh-Iys" firstAttribute="bottom" secondItem="7cD-Qd-uY4" secondAttribute="bottom" id="q7X-GH-Vph"/>
                             <constraint firstItem="9s6-El-8mb" firstAttribute="top" secondItem="o5Z-kN-P6K" secondAttribute="bottom" constant="10" id="xhK-xf-AKF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6TD-Xh-Iys"/>
@@ -628,7 +646,9 @@
                         <outlet property="dateCreatedLabel" destination="OPr-vX-HIk" id="2fq-2b-evb"/>
                         <outlet property="geocachesFoundLabel" destination="xJx-fx-6MP" id="7u5-5D-3zD"/>
                         <outlet property="profileImageView" destination="o5Z-kN-P6K" id="jGV-YF-pvf"/>
+                        <outlet property="tableView" destination="7cD-Qd-uY4" id="gj6-A1-sE0"/>
                         <outlet property="usernameLabel" destination="9s6-El-8mb" id="cX1-TN-Fn5"/>
+                        <segue destination="NA9-LM-aUC" kind="show" identifier="ProfileToGeocache" id="X1b-1u-6oa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rlx-4A-JsL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -645,6 +665,11 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="selectedIndex">
+                            <integer key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <segue destination="WuK-rS-bw4" kind="relationship" relationship="viewControllers" id="QiH-CC-AeG"/>
                         <segue destination="92M-sf-lie" kind="relationship" relationship="viewControllers" id="fQ8-Ow-dOS"/>
@@ -814,6 +839,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="92M-sf-lie" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Map" image="map" catalog="system" id="Ycd-fl-t97"/>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="8tv-yE-I6D"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="OEt-Xn-6ix">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -832,11 +858,11 @@
             <objects>
                 <viewController id="G56-ZF-Vu4" customClass="NavigateViewController" customModule="iCache" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Yop-jT-Jje">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fqg-da-vJv">
-                                <rect key="frame" x="0.0" y="44" width="375" height="79.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="124.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="woF-L3-ouX">
                                         <rect key="frame" x="187.5" y="10" width="0.0" height="0.0"/>
@@ -845,7 +871,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zJB-0q-yNy">
-                                        <rect key="frame" x="187.5" y="69.5" width="0.0" height="0.0"/>
+                                        <rect key="frame" x="187.5" y="114.5" width="0.0" height="0.0"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -860,10 +886,10 @@
                                 </constraints>
                             </view>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="hybrid" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mrA-QG-AvV">
-                                <rect key="frame" x="0.0" y="123.5" width="375" height="543.5"/>
+                                <rect key="frame" x="0.0" y="124.5" width="375" height="498.5"/>
                             </mapView>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B8I-UZ-erj">
-                                <rect key="frame" x="37.5" y="603.5" width="300" height="30"/>
+                                <rect key="frame" x="37.5" y="562" width="300" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Recenter Map"/>
                                 <connections>
@@ -871,7 +897,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wig-yj-N5y">
-                                <rect key="frame" x="131.5" y="133.5" width="112.5" height="30"/>
+                                <rect key="frame" x="131.5" y="134.5" width="112.5" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Log"/>
                                 <connections>
@@ -918,7 +944,7 @@
             <objects>
                 <viewController id="heJ-YB-4SN" customClass="CameraViewController" customModule="iCache" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7ex-nz-YVv">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Fmb-nM-dRC"/>
@@ -957,7 +983,8 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="4ng-p4-Kc9"/>
-        <segue reference="jik-Rc-vpQ"/>
-        <segue reference="Gbi-HM-MIi"/>
+        <segue reference="bgY-8H-kmF"/>
+        <segue reference="ZPh-bL-iqi"/>
+        <segue reference="X1b-1u-6oa"/>
     </inferredMetricsTieBreakers>
 </document>

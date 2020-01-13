@@ -10,6 +10,8 @@
 		860D1ED85C34AF8C6D52A1DB /* Pods_iCache.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9CA5BC589B7038336018E50 /* Pods_iCache.framework */; };
 		ED148B0423C8311E00291A38 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED148B0323C8311E00291A38 /* SearchViewController.swift */; };
 		ED14C66C23BEE69100E3C427 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED14C66A23BEE69100E3C427 /* Main.storyboard */; };
+		ED1E206B23CBF8C200A69FB0 /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1E206923CBF8C200A69FB0 /* ProfileTableViewCell.swift */; };
+		ED1E206C23CBF8C200A69FB0 /* ProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED1E206A23CBF8C200A69FB0 /* ProfileTableViewCell.xib */; };
 		ED37246123CBCFA6008273A0 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED37246023CBCFA6008273A0 /* CameraViewController.swift */; };
 		ED37246323CBDA19008273A0 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED37246223CBDA19008273A0 /* Log.swift */; };
 		ED4C7F3523C8CB6D0008E8DF /* GeocacheViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4C7F3423C8CB6D0008E8DF /* GeocacheViewController.swift */; };
@@ -40,6 +42,8 @@
 		21C7C7C8A309C6C732F122AB /* Pods-iCache.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iCache.release.xcconfig"; path = "Target Support Files/Pods-iCache/Pods-iCache.release.xcconfig"; sourceTree = "<group>"; };
 		ED148B0323C8311E00291A38 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		ED14C66B23BEE69100E3C427 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		ED1E206923CBF8C200A69FB0 /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
+		ED1E206A23CBF8C200A69FB0 /* ProfileTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileTableViewCell.xib; sourceTree = "<group>"; };
 		ED37246023CBCFA6008273A0 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		ED37246223CBDA19008273A0 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		ED4C7F3423C8CB6D0008E8DF /* GeocacheViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeocacheViewController.swift; sourceTree = "<group>"; };
@@ -148,6 +152,8 @@
 				ED14C66A23BEE69100E3C427 /* Main.storyboard */,
 				EDA8E97423C52D0E00D47351 /* MoreTableViewCell.swift */,
 				EDA8E97523C52D0E00D47351 /* MoreTableViewCell.xib */,
+				ED1E206923CBF8C200A69FB0 /* ProfileTableViewCell.swift */,
+				ED1E206A23CBF8C200A69FB0 /* ProfileTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -237,6 +243,7 @@
 				EDFDD01423BEB940001774DD /* GoogleService-Info.plist in Resources */,
 				EDFDD00623BEB7FF001774DD /* Assets.xcassets in Resources */,
 				ED14C66C23BEE69100E3C427 /* Main.storyboard in Resources */,
+				ED1E206C23CBF8C200A69FB0 /* ProfileTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +311,7 @@
 				EDE161F523BFA9C70049272C /* LoginViewController.swift in Sources */,
 				EDA8E97923C52EA500D47351 /* MoreViewController.swift in Sources */,
 				ED85969723C6C928007E8599 /* ProfileViewController.swift in Sources */,
+				ED1E206B23CBF8C200A69FB0 /* ProfileTableViewCell.swift in Sources */,
 				ED87BC9E23BED5AF002BFCAA /* Constants.swift in Sources */,
 				EDD14E4D23C8F1B5005022E1 /* NavigateViewController.swift in Sources */,
 				ED37246123CBCFA6008273A0 /* CameraViewController.swift in Sources */,

@@ -11,8 +11,9 @@ import Foundation
 struct K {
     static let appName = "🌎iCache🌍"
     static let moreCellNibName = "MoreTableViewCell"
-    static let logCellNibName = "ProfileCell"
-    static let cellIdentifier = "ReusableCell"
+    static let logCellNibName = "ProfileTableViewCell"
+    static let logCellIdentifier = "ReusableProfileCell"
+    static let moreCellIdentifier = "ReusableMoreCell"
     static let searchControllerId = "LocationSearchTable"
     static let hintMessage = "Get closer to get more clues!"
     
@@ -37,5 +38,6 @@ struct K {
         static let navigationSegue = "GeocacheToNavigate"
         static let logSegue = "GeocacheToCamera"
         static let foundSegue = "NavigateToCamera"
+        static let logClickedSegue = "ProfileToGeocache"
     }
 }

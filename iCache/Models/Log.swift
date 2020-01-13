@@ -15,7 +15,7 @@ struct Log {
     let id: String
     
     static func addGeocacheToLog(log: String?, geocache: Geocache, isSuccess: Bool) -> String{
-        let date = NSTimeIntervalSince1970
+        let date = Date().timeIntervalSince1970
         
         if isSuccess {
             if log != nil {
@@ -55,7 +55,7 @@ struct Log {
     
     static func checkGeocache(geocache: Geocache, logs: [Log]) -> Bool {
         for log in logs {
-            if log.id == geocache.id && NSTimeIntervalSince1970 < log.date + 86400 {
+            if log.id == geocache.id && Date().timeIntervalSince1970 < log.date + 86400 {
                 return false
             }
         }

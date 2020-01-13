@@ -10,8 +10,9 @@ import UIKit
 import Firebase
 
 class WelcomeViewController: UIViewController {
-        
     @IBOutlet var titleLabel: UILabel!
+    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var registerButton: UIButton!
     
     let db = Firestore.firestore()
     
@@ -47,6 +48,9 @@ class WelcomeViewController: UIViewController {
                             }
                         }
                 }
+            } else {
+                self.loginButton.isHidden = false
+                self.registerButton.isHidden = false
             }
         }
     }
