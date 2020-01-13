@@ -23,9 +23,9 @@ class ProfileViewController: UIViewController {
 
     var user: Profile?
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
         let usersRef = Firestore.firestore().collection("users")
         let storageRef = Storage.storage().reference()
         

@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+import Firebase
 
 class GeocacheViewController: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
@@ -24,6 +25,8 @@ class GeocacheViewController: UIViewController {
     @IBOutlet weak var dateLabel: UILabel!
      
     var geocache: Geocache?
+    
+    let db = Firestore.firestore()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -74,9 +77,9 @@ class GeocacheViewController: UIViewController {
                     break
             }
             
-            difficultyLabel.text = "Difficulty: " + String(format: "%.1f", cache.difficulty).capitalized
+            difficultyLabel.text = "Difficulty: " + String(format: "%.1f", cache.difficulty)
             
-            usernameLabel.text = "Placed by: " + cache.placedBy
+            usernameLabel.text = "Placed by: " + cache.placedBy.capitalized
             dateLabel.text = "On: " + cache.getDateString()
         }
     }
@@ -86,13 +89,59 @@ class GeocacheViewController: UIViewController {
     }
     
     @IBAction func logPressed(_ sender: UIButton) {
+        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        alertController.addAction(UIAlertAction(title: "Found It!", style: .default, handler: { (_) in
+            self.performSegue(withIdentifier: K.Segues.logSegue, sender: self)
+        }))
+        alertController.addAction(UIAlertAction(title: "Did Not Find", style: .default, handler: { (_) in
+            let usersRef = self.db.collection("users")
+            
+            usersRef.whereField("email", isEqualTo: Auth.auth().currentUser!.email!)
+                .getDocuments { (querySnapshot, error) in
+                    if let error = error {
+                        print(error)
+                    } else {
+                        for document in querySnapshot!.documents {
+                            let data = document.data()
+                            if let log = data["log"] as? String {
+                                let logs = Log.parseLog(log: log)
+                                
+                                if Log.checkGeocache(geocache: self.geocache!, logs: logs) {
+                                    let newLog = Log.addGeocacheToLog(log: log, geocache: self.geocache!, isSuccess: false)
+                                    let ref = self.db.collection("users").document(document.documentID)
+                                    ref.updateData([
+                                        "log": newLog
+                                    ])
+                                } else {
+                                    let alertController = UIAlertController(title: "Geocache already logged today", message: "Please try again tomorrow!", preferredStyle: .alert)
+                                    alertController.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+                                    
+                                    self.present(alertController, animated: true)
+                                }
+                            } else {
+                                let newLog = Log.addGeocacheToLog(log: nil, geocache: self.geocache!, isSuccess: false)
+                                let ref = self.db.collection("users").document(document.documentID)
+                                ref.updateData([
+                                    "log": newLog
+                                ])
+                            }
+                        }
+                    }
+            }
+        }))
+        alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         
+        present(alertController, animated: true)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == K.Segues.navigationSegue {
             if let viewController = segue.destination as? NavigateViewController {
                 viewController.destination = geocache?.location
+                viewController.geocache = geocache
+            }
+        } else if segue.identifier == K.Segues.logSegue {
+            if let viewController = segue.destination as? CameraViewController {
                 viewController.geocache = geocache
             }
         }

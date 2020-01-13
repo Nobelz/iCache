@@ -10,6 +10,8 @@
 		860D1ED85C34AF8C6D52A1DB /* Pods_iCache.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9CA5BC589B7038336018E50 /* Pods_iCache.framework */; };
 		ED148B0423C8311E00291A38 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED148B0323C8311E00291A38 /* SearchViewController.swift */; };
 		ED14C66C23BEE69100E3C427 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED14C66A23BEE69100E3C427 /* Main.storyboard */; };
+		ED37246123CBCFA6008273A0 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED37246023CBCFA6008273A0 /* CameraViewController.swift */; };
+		ED37246323CBDA19008273A0 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED37246223CBDA19008273A0 /* Log.swift */; };
 		ED4C7F3523C8CB6D0008E8DF /* GeocacheViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4C7F3423C8CB6D0008E8DF /* GeocacheViewController.swift */; };
 		ED6A839223C2C62300A9D470 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6A839123C2C62300A9D470 /* MainViewController.swift */; };
 		ED85969723C6C928007E8599 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED85969623C6C928007E8599 /* ProfileViewController.swift */; };
@@ -38,6 +40,8 @@
 		21C7C7C8A309C6C732F122AB /* Pods-iCache.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iCache.release.xcconfig"; path = "Target Support Files/Pods-iCache/Pods-iCache.release.xcconfig"; sourceTree = "<group>"; };
 		ED148B0323C8311E00291A38 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		ED14C66B23BEE69100E3C427 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		ED37246023CBCFA6008273A0 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		ED37246223CBDA19008273A0 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		ED4C7F3423C8CB6D0008E8DF /* GeocacheViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeocacheViewController.swift; sourceTree = "<group>"; };
 		ED6A839123C2C62300A9D470 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		ED85969623C6C928007E8599 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -133,6 +137,7 @@
 			children = (
 				ED91C16123C4F02900192CCE /* Geocache.swift */,
 				EDA8E97A23C57A3A00D47351 /* Profile.swift */,
+				ED37246223CBDA19008273A0 /* Log.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -162,6 +167,7 @@
 				ED148B0323C8311E00291A38 /* SearchViewController.swift */,
 				ED4C7F3423C8CB6D0008E8DF /* GeocacheViewController.swift */,
 				EDD14E4C23C8F1B5005022E1 /* NavigateViewController.swift */,
+				ED37246023CBCFA6008273A0 /* CameraViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -285,6 +291,7 @@
 			files = (
 				EDE1359923C0E914002D4D07 /* ForgotPasswordViewController.swift in Sources */,
 				EDA8E97623C52D0E00D47351 /* MoreTableViewCell.swift in Sources */,
+				ED37246323CBDA19008273A0 /* Log.swift in Sources */,
 				EDFDD00123BEB7FD001774DD /* WelcomeViewController.swift in Sources */,
 				EDA8E97B23C57A3A00D47351 /* Profile.swift in Sources */,
 				ED91C16223C4F02900192CCE /* Geocache.swift in Sources */,
@@ -299,6 +306,7 @@
 				ED85969723C6C928007E8599 /* ProfileViewController.swift in Sources */,
 				ED87BC9E23BED5AF002BFCAA /* Constants.swift in Sources */,
 				EDD14E4D23C8F1B5005022E1 /* NavigateViewController.swift in Sources */,
+				ED37246123CBCFA6008273A0 /* CameraViewController.swift in Sources */,
 				ED6A839223C2C62300A9D470 /* MainViewController.swift in Sources */,
 				ED4C7F3523C8CB6D0008E8DF /* GeocacheViewController.swift in Sources */,
 			);

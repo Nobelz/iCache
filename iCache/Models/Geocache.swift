@@ -32,6 +32,7 @@ struct Geocache {
     var location: CLLocation
     var numberOfFinds: Int
     var hints: [String]
+    var id: String
     
     func getDateString() -> String {
         return month + "/" + day + "/" + year

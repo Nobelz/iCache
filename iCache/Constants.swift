@@ -35,5 +35,7 @@ struct K {
         static let finishSetupSegue = "SetupToMain"
         static let geocacheSegue = "MapToGeocache"
         static let navigationSegue = "GeocacheToNavigate"
+        static let logSegue = "GeocacheToCamera"
+        static let foundSegue = "NavigateToCamera"
     }
 }

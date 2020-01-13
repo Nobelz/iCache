@@ -74,9 +74,10 @@ class MapViewController: UIViewController {
                         let numberOfFinds = data["numberOfFinds"] as! Int
                         let hint1 = data["hint1"] as! String
                         let hint2 = data["hint2"] as! String
-                        let hints: [String] = [hint1, hint2]
+                        let hints = [hint1, hint2]
+                        let id = document.documentID
                         
-                        let geocache = Geocache(name: name, placedBy: username, datePlaced: datePlaced, difficulty: difficulty, location: location, numberOfFinds: numberOfFinds, hints: hints)
+                        let geocache = Geocache(name: name, placedBy: username, datePlaced: datePlaced, difficulty: difficulty, location: location, numberOfFinds: numberOfFinds, hints: hints, id: id)
                         
                         self.geocaches.append(geocache)
                     }

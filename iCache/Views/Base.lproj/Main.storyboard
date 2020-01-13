@@ -513,6 +513,7 @@
                         <outlet property="navigationButton" destination="7hg-Hy-QqR" id="hMJ-yd-c8o"/>
                         <outlet property="usernameLabel" destination="uze-7D-n3h" id="H9V-x1-Z3z"/>
                         <segue destination="G56-ZF-Vu4" kind="show" identifier="GeocacheToNavigate" id="3zF-Um-dSs"/>
+                        <segue destination="heJ-YB-4SN" kind="show" identifier="GeocacheToCamera" id="gu1-mH-4Ka"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GMz-qB-wOV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -869,15 +870,27 @@
                                     <action selector="recenterPressed:" destination="G56-ZF-Vu4" eventType="touchUpInside" id="m36-Y9-Ypo"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wig-yj-N5y">
+                                <rect key="frame" x="131.5" y="133.5" width="112.5" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Log"/>
+                                <connections>
+                                    <action selector="logPressed:" destination="G56-ZF-Vu4" eventType="touchUpInside" id="BYO-pZ-1mI"/>
+                                    <action selector="recenterPressed:" destination="G56-ZF-Vu4" eventType="touchUpInside" id="WLO-ZP-WUQ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="Fqg-da-vJv" firstAttribute="bottom" secondItem="fLF-CA-pPP" secondAttribute="bottom" multiplier="0.2" id="5vb-4A-Wly"/>
+                            <constraint firstItem="Wig-yj-N5y" firstAttribute="top" secondItem="Fqg-da-vJv" secondAttribute="bottom" constant="10" id="9Wq-nI-wMe"/>
                             <constraint firstItem="mrA-QG-AvV" firstAttribute="top" secondItem="fLF-CA-pPP" secondAttribute="bottom" multiplier="0.2" id="Djf-Jt-xnJ"/>
                             <constraint firstItem="B8I-UZ-erj" firstAttribute="trailing" secondItem="fLF-CA-pPP" secondAttribute="trailing" multiplier="0.9" id="GLE-iF-Flc"/>
+                            <constraint firstItem="Wig-yj-N5y" firstAttribute="trailing" secondItem="fLF-CA-pPP" secondAttribute="trailing" multiplier="0.65" id="MoE-li-Mh4"/>
                             <constraint firstAttribute="bottom" secondItem="mrA-QG-AvV" secondAttribute="bottom" id="Nyg-2c-Ke6"/>
                             <constraint firstItem="Fqg-da-vJv" firstAttribute="top" secondItem="fLF-CA-pPP" secondAttribute="top" id="OFX-Ns-oWK"/>
                             <constraint firstItem="B8I-UZ-erj" firstAttribute="bottom" secondItem="Yop-jT-Jje" secondAttribute="bottom" multiplier="0.95" id="SR3-K3-EXd"/>
+                            <constraint firstItem="Wig-yj-N5y" firstAttribute="leading" secondItem="fLF-CA-pPP" secondAttribute="trailing" multiplier="0.35" id="ZvI-lU-pDX"/>
                             <constraint firstItem="fLF-CA-pPP" firstAttribute="trailing" secondItem="mrA-QG-AvV" secondAttribute="trailing" id="Zzb-93-eRq"/>
                             <constraint firstItem="B8I-UZ-erj" firstAttribute="leading" secondItem="fLF-CA-pPP" secondAttribute="trailing" multiplier="0.1" id="d8O-0t-KEI"/>
                             <constraint firstItem="Fqg-da-vJv" firstAttribute="leading" secondItem="fLF-CA-pPP" secondAttribute="leading" id="ddd-BE-jsO"/>
@@ -893,11 +906,28 @@
                         <outlet property="mapView" destination="mrA-QG-AvV" id="5T1-gQ-197"/>
                         <outlet property="navigationLabel" destination="woF-L3-ouX" id="2W5-Rb-eCA"/>
                         <outlet property="recenterButton" destination="B8I-UZ-erj" id="X9T-zR-8W1"/>
+                        <segue destination="heJ-YB-4SN" kind="show" identifier="NavigateToCamera" id="4ng-p4-Kc9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qRM-E8-m51" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="10532" y="3222.6386806596706"/>
+        </scene>
+        <!--Camera View Controller-->
+        <scene sceneID="Tee-qL-V8H">
+            <objects>
+                <viewController id="heJ-YB-4SN" customClass="CameraViewController" customModule="iCache" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7ex-nz-YVv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Fmb-nM-dRC"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="iWA-ua-Z5P"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i4d-wa-2Cq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="11460" y="3223"/>
         </scene>
     </scenes>
     <resources>
@@ -926,6 +956,7 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="4ng-p4-Kc9"/>
         <segue reference="jik-Rc-vpQ"/>
         <segue reference="Gbi-HM-MIi"/>
     </inferredMetricsTieBreakers>
