@@ -119,7 +119,7 @@ extension ProfileViewController: UITableViewDataSource {
             return cell
         } else {
             cell.iconImageView.image = UIImage(systemName: "magnifyingglass")
-            cell.idLabel.text = "No geocaches logged. Go log some!"
+            cell.idLabel.text = K.noLogMessage
             
             return cell
         }

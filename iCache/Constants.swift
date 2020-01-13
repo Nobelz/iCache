@@ -16,6 +16,7 @@ struct K {
     static let moreCellIdentifier = "ReusableMoreCell"
     static let searchControllerId = "LocationSearchTable"
     static let hintMessage = "Get closer to get more clues!"
+    static let noLogMessage = "No geocaches logged. Go log some!"
     
     struct BrandColors {
         static let blue = "BrandBlue"
