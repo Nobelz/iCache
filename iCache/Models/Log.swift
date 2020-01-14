@@ -33,7 +33,7 @@ struct Log {
     }
     
     static func parseLog(log: String) -> [Log] {
-        let parsedArray = log.components(separatedBy: "\n").map{ $0.components(separatedBy: ",") }
+        let parsedArray = log.components(separatedBy: ";").map{ $0.components(separatedBy: ",") }
         
         var logs: [Log] = []
         

@@ -128,9 +128,9 @@ extension NavigateViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         switch status {
         case .denied, .restricted:
-            let alertController = UIAlertController(title: "Location Access Required", message: "Go to Settings -> Privacy -> Location Services and make sure iCache's settings are set to Allow While Using, then rerun app.", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "Location Access Required", message: K.noLocationMessage, preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "Go To Settings", style: .default, handler: { (_) in
-                UIApplication.shared.open(URL(string:"App-Prefs:root=LOCATION_SERVICES")!, options: [:], completionHandler: nil)
+                UIApplication.shared.open(URL(string: K.settingsPath)!, options: [:], completionHandler: nil)
             }))
             alertController.addAction(UIAlertAction(title: "No I'm Good", style: .destructive, handler: nil))
             self.present(alertController, animated: true)
@@ -157,6 +157,9 @@ extension NavigateViewController: CLLocationManagerDelegate {
                 convertedDistance = distanceInMeters / 1609.0
             }
             
+            let line = MKPolyline(coordinates: coordinates, count: coordinates.count)
+            mapView.addOverlay(line)
+            
             if isFeet {
                 let distance = round(convertedDistance)
                 switch convertedDistance {
@@ -168,20 +171,14 @@ extension NavigateViewController: CLLocationManagerDelegate {
                             hintLabel.text = geocache?.hints[0]
                             navigationLabel.text = "<200 Feet"
                         }
-                        
-                        mapView.removeOverlays(mapView.overlays)
                     case 201...1000:
                         navigationLabel.text = "\(Int(round(distance / 100) * 100)) Feet"
                         hintLabel.text = K.hintMessage
                         
-                        let line = MKPolyline(coordinates: coordinates, count: coordinates.count)
-                        mapView.addOverlay(line)
+                        
                     case 1001...2000:
                         navigationLabel.text = "\(Int(round(distance / 500) * 500)) Feet"
                         hintLabel.text = K.hintMessage
-                        
-                        let line = MKPolyline(coordinates: coordinates, count: coordinates.count)
-                        mapView.addOverlay(line)
                     default:
                         break
                 }

@@ -71,13 +71,12 @@ class MapViewController: UIViewController {
                         let difficulty = data["difficulty"] as! Double
                         let locationGeopoint = data["location"] as! GeoPoint
                         let location = CLLocation(latitude: CLLocationDegrees(exactly: locationGeopoint.latitude)!, longitude: CLLocationDegrees(exactly: locationGeopoint.longitude)!)
-                        let numberOfFinds = data["numberOfFinds"] as! Int
                         let hint1 = data["hint1"] as! String
                         let hint2 = data["hint2"] as! String
                         let hints = [hint1, hint2]
                         let id = document.documentID
                         
-                        let geocache = Geocache(name: name, placedBy: username, datePlaced: datePlaced, difficulty: difficulty, location: location, numberOfFinds: numberOfFinds, hints: hints, id: id)
+                        let geocache = Geocache(name: name, placedBy: username, datePlaced: datePlaced, difficulty: difficulty, location: location, hints: hints, id: id)
                         
                         self.geocaches.append(geocache)
                     }
@@ -136,9 +135,9 @@ extension MapViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         switch status {
             case .denied, .restricted:
-                let alertController = UIAlertController(title: "Location Access Required", message: "Go to Settings -> Privacy -> Location Services and make sure iCache's settings are set to Allow While Using, then rerun app.", preferredStyle: .alert)
+                let alertController = UIAlertController(title: "Location Access Required", message: K.noLocationMessage, preferredStyle: .alert)
                 alertController.addAction(UIAlertAction(title: "Go To Settings", style: .default, handler: { (_) in
-                    UIApplication.shared.open(URL(string:"App-Prefs:root=LOCATION_SERVICES")!, options: [:], completionHandler: nil)
+                    UIApplication.shared.open(URL(string: K.settingsPath)!, options: [:], completionHandler: nil)
                 }))
                 alertController.addAction(UIAlertAction(title: "No I'm Good", style: .destructive, handler: nil))
                 self.present(alertController, animated: true)
@@ -188,6 +187,16 @@ extension MapViewController: MKMapViewDelegate {
         button.addTarget(self, action: #selector(annotationClicked), for: .touchUpInside)
         pinView?.leftCalloutAccessoryView = button
         
+        return pinView
+    }
+    
+    @objc func annotationClicked() {
+        performSegue(withIdentifier: K.Segues.geocacheSegue, sender: self)
+    }
+    
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        let annotation = view.annotation!
+        
         let lat = annotation.coordinate.latitude
         let lon = annotation.coordinate.longitude
         
@@ -196,12 +205,6 @@ extension MapViewController: MKMapViewDelegate {
                 selectedGeocache = geocache
             }
         }
-        
-        return pinView
-    }
-    
-    @objc func annotationClicked() {
-        performSegue(withIdentifier: K.Segues.geocacheSegue, sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

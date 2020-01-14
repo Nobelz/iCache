@@ -17,6 +17,8 @@ struct K {
     static let searchControllerId = "LocationSearchTable"
     static let hintMessage = "Get closer to get more clues!"
     static let noLogMessage = "No geocaches logged. Go log some!"
+    static let noLocationMessage = "Go to Settings -> iCache and make sure iCache's settings are set to Allow While Using, then rerun app."
+    static let settingsPath = "App-Prefs:root=LOCATION_SERVICES"
     
     struct BrandColors {
         static let blue = "BrandBlue"

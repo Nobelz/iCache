@@ -30,7 +30,6 @@ struct Geocache {
     }
     var difficulty: Double
     var location: CLLocation
-    var numberOfFinds: Int
     var hints: [String]
     var id: String
     
